@@ -20,7 +20,7 @@ resource "aws_instance" "<##INSTANCE_NAME##>" {
         security_groups = ["${aws_security_group.sg-02ebf81c9fd2d0b68.id}"]
         subnet_id = "${aws_subnet.subnet-0c59a465aaea21d4a.id}"
 	instance_type = "t2.micro"
-	user_data = "${file("<##USER_DATA##>")}"
+	# user_data = "${file("<##USER_DATA##>")}"
 
         tags = {
                 Name = "<##INSTANCE_NAME##>"
