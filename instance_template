@@ -28,7 +28,7 @@ resource "aws_security_group" "<##INSTANCE_NAME##>_sg_JENKINS" {
 }
 
 resource "aws_subnet" "<##INSTANCE_NAME##>_subnet_JENKINS" {
-  vpc_id     = aws_vpc.vpc_JENKINS.id
+  vpc_id     = aws_vpc.<##INSTANCE_NAME##>_vpc_JENKINS.id
 }
 
 resource "aws_instance" "<##INSTANCE_NAME##>" {
